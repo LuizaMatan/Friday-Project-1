@@ -1,4 +1,4 @@
-Id,IndicatorCode,SpatialDimension,SpatialDimensionValueCode,TimeDimension,TimeDim,DisaggregatingDimension1,DisaggregatingDimension1ValueCode,DisaggregatingDimension2,DisaggregatingDimension2ValueCode,DisaggregatingDimension3,DisaggregatingDimension3ValueCode,DataSourceDimension,DataSourceDimensionValueCode,StandAloneLaw,NumericValue,Low,High,Comments,Date,TimeDimensionValue,TimeDimensionBegin,TimeDimensionEnd
+Id,IndicatorCode,SpatialDimension,SpatialDimensionValueCode,TimeDimension,TimeDim,DisaggregatingDimension1,DisaggregatingDimension1ValueCode,DisaggregatingDimension2,DisaggregatingDimension2ValueCode,DisaggregatingDimension3,DisaggregatingDimension3ValueCode,DataSourceDimension,DataSourceDimensionValueCode,Stand-alone law for mental health,NumericValue,Low,High,Comments,Date,TimeDimensionValue,TimeDimensionBegin,TimeDimensionEnd
 20735381,MH_3,COUNTRY,AFG,YEAR,2016,,,,,,,,,Yes,,,,,2019-04-25T08:25:04Z,2016,2016-01-01,2016-12-31
 20735382,MH_3,COUNTRY,AGO,YEAR,2016,,,,,,,,,No,,,,,2019-04-25T08:25:04Z,2016,2016-01-01,2016-12-31
 20735383,MH_3,COUNTRY,ALB,YEAR,2016,,,,,,,,,Yes,,,,,2019-04-25T08:25:04Z,2016,2016-01-01,2016-12-31
