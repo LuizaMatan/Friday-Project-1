@@ -1,4 +1,4 @@
-Id,IndicatorCode,SpatialDimension,SpatialDimensionValueCode,TimeDimension,TimeDim,DisaggregatingDimension1,DisaggregatingDimension1ValueCode,DisaggregatingDimension2,DisaggregatingDimension2ValueCode,DisaggregatingDimension3,DisaggregatingDimension3ValueCode,DataSourceDimension,DataSourceDimensionValueCode,Value,NumericValue,Low,High,Comments,Date,TimeDimensionValue,TimeDimensionBegin,TimeDimensionEnd
+Id,IndicatorCode,SpatialDimension,SpatialDimensionValueCode,TimeDimension,TimeDim,DisaggregatingDimension1,DisaggregatingDimension1ValueCode,DisaggregatingDimension2,DisaggregatingDimension2ValueCode,DisaggregatingDimension3,DisaggregatingDimension3ValueCode,DataSourceDimension,DataSourceDimensionValueCode,StandAlonePolicyPlan,NumericValue,Low,High,Comments,Date,TimeDimensionValue,TimeDimensionBegin,TimeDimensionEnd
 20734962,MH_25,COUNTRY,AFG,YEAR,2016,,,,,,,,,Yes,,,,,2019-04-25T08:24:55Z,2016,2016-01-01,2016-12-31
 20734963,MH_25,COUNTRY,AGO,YEAR,2016,,,,,,,,,No,,,,,2019-04-25T08:24:55Z,2016,2016-01-01,2016-12-31
 20734964,MH_25,COUNTRY,ALB,YEAR,2016,,,,,,,,,Yes,,,,,2019-04-25T08:24:55Z,2016,2016-01-01,2016-12-31
