@@ -31,12 +31,24 @@ for f in glob.glob(path):
 if not dfs:
     raise FileNotFoundError(f"No CSV files found at: {path}")
 
-for i, d in enumerate(dfs):
-    missing = [c for c in ["TimeDim", "SpatialDimensionValueCode"] if c not in d.columns]
-    if missing:
-        print(f"dfs[{i}] missing: {missing} | columns: {d.columns.tolist()}")
+def normalize(df):
+    """Standardize column names across different WHO export formats."""
+    # Normalize spatial key
+    if "SpatialDimValueCode" in df.columns and "SpatialDimensionValueCode" not in df.columns:
+        df = df.rename(columns={"SpatialDimValueCode": "SpatialDimensionValueCode"})
+
+    # Normalize time key
+    if "Period" in df.columns and "TimeDim" not in df.columns:
+        df = df.rename(columns={"Period": "TimeDim"})
+
+    # Normalize value column
+    if "FactValueNumeric" in df.columns and "NumericValue" not in df.columns:
+        df = df.rename(columns={"FactValueNumeric": "NumericValue"})
+
+    return df
 
 def pivot_indicator(df):
+    df = normalize(df)
     indicator = df["IndicatorCode"].iloc[0]
     drop_cols = [c for c in ["Id", "IndicatorCode"] if c in df.columns]
     return (
@@ -44,6 +56,7 @@ def pivot_indicator(df):
         .drop_duplicates(subset=["TimeDim", "SpatialDimensionValueCode"])
         .rename(columns={"NumericValue": indicator})
     )
+
 pivoted = [pivot_indicator(d) for d in dfs]
 
 df = pivoted[0]
@@ -56,6 +69,7 @@ df = df.drop(columns=[c for c in df.columns if c.endswith("_dup")])
 
 print(f"df type: {type(df)}")
 print(f"\ndf rows: {df.shape[0]}, df cols: {df.shape[1]}")
-print(f"\nFeatures:\n{df.dtypes.to_string()}")
-print(df.info())
-print(df.describe())
+# print(f"\nFeatures:\n{df.dtypes.to_string()}")
+# print(df.info())
+# print(df.describe())
+
